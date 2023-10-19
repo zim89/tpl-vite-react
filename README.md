@@ -62,3 +62,24 @@ Install [eslint-config-prettier](https://github.com/prettier/eslint-config-prett
     'prettier/prettier': 'error'
   },
 ```
+
+## Husky and lint-staged
+
+Install [husky](https://github.com/typicode/husky) and [lint-staged](https://github.com/lint-staged/lint-staged):
+
+```
+yarn add --dev husky lint-staged
+npx husky install
+npm pkg set scripts.prepare="husky install"
+npx husky add .husky/pre-commit "npx lint-staged"
+```
+
+Add the following to your `package.json`:
+
+```json
+{
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  }
+}
+```
