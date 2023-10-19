@@ -79,6 +79,7 @@ Add the following to your `package.json`:
 ```json
 {
   "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "eslint --cache --fix",
     "**/*": "prettier --write --ignore-unknown"
   }
 }
