@@ -128,3 +128,33 @@ Add the following to your `package.json`:
   }
 }
 ```
+
+## Vite configs
+
+[vite-plugin-svgr](https://www.npmjs.com/package/vite-plugin-svgr) to transform SVGs into React components:
+
+```
+yarn add --dev vite-plugin-svgr
+```
+
+[vite-tsconfig-paths](https://www.npmjs.com/package/vite-tsconfig-paths) give vite the ability to resolve imports using TypeScript's path mapping.
+
+```
+yarn add --dev vite-tsconfig-paths
+```
+
+## TS configs
+
+Add to `tsconfigs.json` for absolute paths:
+
+```json
+/* Paths */
+"baseUrl": ".",
+"paths": {
+  "@/*": ["./src/*"]
+}
+```
+
+```json
+ "include": [".eslintrc.cjs", "src"], ???
+```
