@@ -63,6 +63,50 @@ Install [eslint-config-prettier](https://github.com/prettier/eslint-config-prett
   },
 ```
 
+## Stylelint
+
+install Stylelint and the config:
+
+```
+yarn add --dev stylelint stylelint-config-standard stylelint-config-clean-order
+```
+
+Add `.stylelintrc.json`:
+
+```json
+{
+  "extends": ["stylelint-config-standard", "stylelint-config-clean-order"],
+  "rules": {
+    "no-empty-source": null,
+    "declaration-empty-line-before": null,
+    "no-missing-end-of-source-newline": null,
+    "selector-class-pattern": null,
+    "keyframes-name-pattern": null
+  },
+  "ignoreFiles": [
+    "build/**",
+    "coverage/**",
+    "dist/**",
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.ts",
+    "**/*.tsx"
+  ]
+}
+```
+
+Add script to `package.json`:
+
+```json
+"lint:css": "stylelint \"src/*.css\""
+```
+
+### ??? other configs
+
+If you are going to use styled components also install `stylelint-config-styled-components`
+
+The recommended shareable config for Stylelint `stylelint-config-recommended`
+
 ## Husky and lint-staged
 
 Install [husky](https://github.com/typicode/husky) and [lint-staged](https://github.com/lint-staged/lint-staged):
