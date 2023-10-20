@@ -6,6 +6,8 @@ build
 coverage
 ist-ssr
 *.local
+vite-env.d.ts
 vite.config.ts
+jest.config.js
 .prettierrc.json
 package.json
